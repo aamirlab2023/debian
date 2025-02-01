@@ -1,0 +1,24 @@
+o Open the terminal.
+o Run the command
+    su root
+o Enter Password.
+o Enter the command
+    sudo visudo
+o Note that there must be the line
+    %sudo   ALL=(ALL:ALL) ALL
+  after the line
+    root    ALL=(ALL:ALL) ALL
+o If the line
+    %sudo   ALL=(ALL:ALL) ALL
+  does not exist, add it after the line
+    root    ALL=(ALL:ALL) ALL
+o Press Ctrl+X to save the changes.
+o Enter the following command
+    sudo usermod -a -G sudo aamir
+o It will add aamir to sudoers file.
+o To cheeck if aamir is in sudoers file, enter the following command
+    groups aamir
+o The output of above command must show sudo along with cdrom and floppy etc.
+o Reboot.
+o You are done.
+o Enjoy!
